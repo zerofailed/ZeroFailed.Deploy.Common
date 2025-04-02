@@ -8,7 +8,7 @@ A [ZeroFailed](https://github.com/zerofailed/ZeroFailed) extension that provides
 |----------------|----------|---------------------|
 | Tasks          | yes      | |
 | Functions      | no       | |
-| Processes      | no       | |
+| Processes      | yes      | Includes a generic logical deployment process designed to be integrated with by other extensions that provide the actual deployment functionality. |
 
 For more information about the different component types, please refer to the [ZeroFailed documentation](https://github.com/zerofailed/ZeroFailed/blob/main/README.md#extensions).
 

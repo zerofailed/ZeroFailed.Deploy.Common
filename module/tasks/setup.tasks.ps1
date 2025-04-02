@@ -6,9 +6,10 @@
 
 # Synopsis: Sets up the Azure context for the deployment
 task connectAzure -If { !$SkipConnectAzure } readConfiguration,{
+    
     Connect-CorvusAzure `
-        -SubscriptionId $deploymentConfig.azureSubscriptionId `
-        -AadTenantId $deploymentConfig.AzureTenantId `
+        -SubscriptionId $script:DeploymentConfig.azureSubscriptionId `
+        -AadTenantId $script:DeploymentConfig.AzureTenantId `
         -SkipAzPowerShell:$SkipConnectAzurePowerShell `
         -SkipAzureCli:$SkipConnectAzureCli
 }
