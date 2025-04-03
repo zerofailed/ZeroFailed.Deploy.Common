@@ -3,13 +3,13 @@
 # </copyright>
 
 # Synopsis: When true, configuring the Azure connection context will be skipped. Default is false.
-$SkipConnectAzure = property ZF_DEPLOY_SKIP_CONNECTAZURE $false
+$SkipConnectAzure = [Convert]::ToBoolean((property ZF_DEPLOY_SKIP_CONNECTAZURE $false))
 
 # Synopsis: When set to true, configuring the Azure PowerShell connection context will be skipped. Default is false.
-$SkipConnectAzurePowerShell = property ZF_DEPLOY_SKIP_CONNECTAZURE_PS $false
+$SkipConnectAzurePowerShell = [Convert]::ToBoolean((property ZF_DEPLOY_SKIP_CONNECTAZURE_PS $false))
 
 # Synopsis: When set to true, configuring the Azure CLI connection context will be skipped. Default is true.
-$SkipConnectAzureCli = property ZF_DEPLOY_SKIP_CONNECTAZURE_CLI $false
+$SkipConnectAzureCli = [Convert]::ToBoolean((property ZF_DEPLOY_SKIP_CONNECTAZURE_CLI $true))
 
 # Synopsis: A hashtable of PowerShell modules to install and import. The keys are the module names and the values are hashtables with the following properties: version, repository.
 # $RequiredPowerShellModules = property ZF_REQUIRED_PS_MODULES @{
