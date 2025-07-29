@@ -20,6 +20,6 @@ task ensureCorvusDeploymentModule -If { !$SkipReadConfiguration } -Before setupM
 task readConfiguration -If { !$SkipReadConfiguration } -After InitCore ensureCorvusDeploymentModule,setupModules,{
 
     $script:DeploymentConfig = Read-CorvusDeploymentConfig `
-                                    -ConfigPath $ConfigPath  `
+                                    -ConfigPath $EnvironmentConfigPath  `
                                     -EnvironmentConfigName $EnvironmentConfigName
 }
