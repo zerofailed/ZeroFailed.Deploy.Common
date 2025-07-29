@@ -2,11 +2,7 @@
 # Copyright (c) Endjin Limited. All rights reserved.
 # </copyright>
 
-# Top-level deployment process control flags
-$SkipInit = property ZF_DEPLOY_SKIP_INIT $false
-$SkipProvision = property ZF_DEPLOY_SKIP_PROVISION $false
-$SkipDeploy = property ZF_DEPLOY_SKIP_DEPLOY $false
-$SkipTest = property ZF_DEPLOY_SKIP_TEST $false
+. $PSScriptRoot/deploy.process.properties.ps1
 
 # Define a logical deployment process that extensions can attach to
 
