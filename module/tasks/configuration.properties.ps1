@@ -5,7 +5,7 @@
 $DeploymentConfig = @{}
 
 # Synopsis: When true, the deployment configuration will not be processed.
-$SkipReadConfiguration = [Convert]::ToBoolean((property ZF_DEPLOY_SKIP_READ_CONFIGURATION $false))
+$SkipReadConfiguration = [bool]([string](property ZF_DEPLOY_SKIP_READ_CONFIGURATION $false) -match '^(1|true|yes)$')
 
 # Synopsis: The path to the folder containing  deployment configuration files for the environments.
 $EnvironmentConfigPath = [string]::IsNullOrEmpty($EnvironmentConfigPath) ? (property ZF_DEPLOY_ENVIRONMENT_CONFIG_PATH ((Test-Path variable:/here) ? (Join-Path $here "config") : "./config")) : $EnvironmentConfigPath
