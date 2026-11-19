@@ -12,7 +12,9 @@ $zerofailedExtensions = @(
 
 # Set the required build options
 $PesterTestsDir = "$here/module"
-$PesterVersion = "5.5.0"
+# The module has no functions yet, only InvokeBuild task files, so there is no code for coverage to measure.
+# Enable it, with '$PesterCodeCoveragePaths = @("$PesterTestsDir/functions")', when functions are added.
+$PesterCodeCoverageEnabled = $false
 $PowerShellModulesToPublish = @(
     @{
         ModulePath = "$here/module/ZeroFailed.Deploy.Common.psd1"
