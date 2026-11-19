@@ -43,6 +43,7 @@ $PowerShellRepositories = @(
 $PSMarkdownDocsFlattenOutputPath = $true
 $PSMarkdownDocsOutputPath = './docs/functions'
 $PSMarkdownDocsIncludeModulePage = $false
+$CreateGitHubRelease = $true
 
 # Customise the build process
 task . FullBuild
